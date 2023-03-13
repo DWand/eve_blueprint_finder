@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, "Trebuchet MS", Verdana, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    list-style: none;
+    box-sizing: border-box;
+    outline: none;
+}
+
+html {
+    padding: 10px;
+}
+
+body {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+h1 {
+    margin: 0 0 10px;
+    height: 40px;
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: bold;
+}
+
+form div {
+    margin: 5px 0;
+}
+
+label {
+    margin-right: 5px;
+}
+
+input,
+textarea,
+button {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #888;
+}
+
+textarea {
+    width: 100%;
+    min-height: 100px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #fff;
+}
+
+button:hover {
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+.blueprints {
+    margin: 10px 0;
+}
+
+.loader {
+    display: none;
+    text-align: center;
+}
+
+.message {
+    text-align: center;
+}
+
+.message p {
+    text-align: left;
+    margin-top: 10px;
+}
+
+li {
+    display: block;
+    position: relative;
+    padding: 0 0 10px;
+}
+
+li .name {
+    padding-right: 50px;
+}
+
+li .status {
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: right;
+}
+
+li .completeness {
+    display: inline-block;
+    width: 50px;
+}
+
+.wait .loader {
+    display: block;
+}
+
+.wait .message,
+.wait .list {
+    display: none;
+}
+
+@media (min-width: 700px) {
+    .input {
+        float: left;
+        width: 33%;
+        padding-right: 20px;
+    }
+
+    .blueprints {
+        padding-left: 33%;
+    }
+
+    .blueprints:after {
+        display: block;
+        content: '';
+        clear: both;
+    }
+}

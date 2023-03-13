@@ -1,0 +1,55 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <title>EVE Blueprint Finder</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="app.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+    <h1>EVE Blueprint Finder</h1>
+
+    <div class="input">
+        <div class="instructions">
+            Paste your assets to the Assets field below and click "Find Blueprints" button.
+        </div>
+
+        <form>
+            <div>
+                <label for="completenessFld">Completeness:</label>
+                <input id="completenessFld" type="number" value="100" min="1" max="100" step="1" />
+            </div>
+            <div>
+                <label for="assetsFld">Assets:</label>
+                <textarea id="assetsFld" placeholder="Paste one asset per row..."></textarea>
+            </div>
+            <button>Find Blueprints</button>
+        </form>
+    </div>
+
+    <div class="blueprints">
+        <div class="loader">Please, wait...</div>
+        <div class="message">
+            <p>
+                This tool provides a way to determine what blueprints you can build using
+                the provided assets.
+            </p>
+            <p>
+                It shows both direct and derived matches. Derived matches are those blueprints which
+                require items produced by other blueprints.
+            </p>
+            <p>
+                Please, note that this tools uses only material types. It doesn't take into account
+                the amount of materials and skills required to use a blueprint.
+            </p>
+        </div>
+        <div class="list"></div>
+    </div>
+
+    <script src="export.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
